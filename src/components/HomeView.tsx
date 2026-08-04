@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Rocket, Users, Smartphone, Play, ShieldAlert, ArrowRight, Radio, Shield, Terminal } from 'lucide-react';
 import { AvatarPicker } from './AvatarPicker';
 import logoInfiltradosWhite from '../assets/images/logo-infiltrados-white.png';
+import logoInfiltradosSmall from '../assets/images/logo-infiltrados-white-small.webp';
 import { soundEngine } from '../utils/AudioService';
 import agentHeroImg from '../assets/images/cronos new retroreto.webp';
 
@@ -18,7 +19,7 @@ interface HomeViewProps {
   onOpenRules: () => void;
 }
 
-export const HomeView: React.FC<HomeViewProps> = ({
+export default function HomeView({
   playerName,
   avatarColor,
   avatarIconIndex,
@@ -29,7 +30,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
   onJoinRoom,
   onStartPassAndPlay,
   onOpenRules
-}) => {
+}: HomeViewProps) {
   const [inputCode, setInputCode] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
 
@@ -63,7 +64,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
   return (
     <div className="w-full max-w-lg mx-auto space-y-6 pb-12 px-4 animate-fade-in">
-      {/* Official Header Banner with Logo Infiltrados White */}
+      {/* Encabezado con Logotipos Ajustados */}
       <div className="text-center space-y-4 pt-2">
         <div className="relative inline-block w-full">
           {/* Ambient Glow */}
@@ -71,7 +72,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
           {/* Windows OS Window Card Header */}
           <div className="relative z-10 bg-[#121622]/90 border border-[#2B354C] rounded-3xl p-5 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.6)]">
-            {/* Windows Window Controls Header Bar */}
+            
+            {/* Windows Window Controls & Small Logo Bar */}
             <div className="flex items-center justify-between border-b border-[#2B354C] pb-3 mb-4">
               <div className="flex items-center gap-1.5">
                 <div className="w-3 h-3 rounded-full bg-[#FF5F56] border border-[#E0443E]" />
@@ -79,21 +81,35 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <div className="w-3 h-3 rounded-full bg-[#27C93F] border border-[#1AAB29]" />
               </div>
 
-              <div className="flex items-center gap-2 text-[10px] font-mono font-bold text-[#00F0FF] uppercase tracking-widest bg-[#0B0E17] px-2.5 py-1 rounded-full border border-[#00F0FF]/30">
+              {/* Logo Pequeño en la esquina superior */}
+              <div className="flex items-center">
+                <img
+                  src={logoInfiltradosSmall}
+                  alt="RetroReto Logo Small"
+                  className="h-6 object-contain"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+
+              <div className="hidden sm:flex items-center gap-2 text-[10px] font-mono font-bold text-[#00F0FF] uppercase tracking-widest bg-[#0B0E17] px-2.5 py-1 rounded-full border border-[#00F0FF]/30">
                 <Terminal className="w-3 h-3" />
-                <span>RETRORETO PRESENTA</span>
+                <span>RETRORETO</span>
               </div>
             </div>
 
-            {/* Logo Infiltrados White Image */}
+            {/* Logo Principal (Tamaño reducido y balanceado) */}
             <div className="py-2 flex justify-center">
               <img
                 src={logoInfiltradosWhite}
                 alt="RetroReto Infiltrados en el Tiempo"
-                className="w-full max-h-28 object-contain drop-shadow-[0_0_15px_rgba(0,242,255,0.3)]"
+                className="w-full max-w-[280px] max-h-16 sm:max-h-20 object-contain drop-shadow-[0_0_15px_rgba(0,242,255,0.3)]"
                 referrerPolicy="no-referrer"
               />
             </div>
+            
+            <p className="text-xs text-slate-300 max-w-sm mx-auto mt-2 leading-relaxed">
+              Un viaje temporal. Un infiltrado oculto. ¡Descúbrelo!
+            </p>
           </div>
         </div>
       </div>
@@ -250,4 +266,4 @@ export const HomeView: React.FC<HomeViewProps> = ({
       </div>
     </div>
   );
-};
+}
