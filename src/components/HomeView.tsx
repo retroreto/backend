@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Rocket, Users, Smartphone, Sparkles, Play, ShieldAlert, ArrowRight, Radio, Shield, Terminal } from 'lucide-react';
+import { Rocket, Users, Smartphone, Play, ShieldAlert, ArrowRight, Radio, Shield, Terminal } from 'lucide-react';
 import { AvatarPicker } from './AvatarPicker';
 import logoInfiltradosWhite from '../assets/images/logo-infiltrados-white.png';
 import { soundEngine } from '../utils/AudioService';
-import agentHeroImg from '../assets/images/src/assets/images/src/assets/images/src/assets/images/cronos new retroreto.webp';
+import agentHeroImg from '../assets/images/cronos new retroreto.webp';
 
 interface HomeViewProps {
   playerName: string;
@@ -63,7 +63,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
   return (
     <div className="w-full max-w-lg mx-auto space-y-6 pb-12 px-4 animate-fade-in">
-      {/* Official Header Banner with RetroReto Logo */}
+      {/* Official Header Banner with Logo Infiltrados White */}
       <div className="text-center space-y-4 pt-2">
         <div className="relative inline-block w-full">
           {/* Ambient Glow */}
@@ -85,12 +85,15 @@ export const HomeView: React.FC<HomeViewProps> = ({
               </div>
             </div>
 
-            {/* Logo Component */}
-            <RetroRetoLogo size="xl" showSubtitle={true} />
-
-            <p className="text-xs text-slate-300 max-w-sm mx-auto mt-3 leading-relaxed">
-              Un viaje temporal. Un infiltrado oculto. ¡Descúbrelo!
-            </p>
+            {/* Logo Infiltrados White Image */}
+            <div className="py-2 flex justify-center">
+              <img
+                src={logoInfiltradosWhite}
+                alt="RetroReto Infiltrados en el Tiempo"
+                className="w-full max-h-28 object-contain drop-shadow-[0_0_15px_rgba(0,242,255,0.3)]"
+                referrerPolicy="no-referrer"
+              />
+            </div>
           </div>
         </div>
       </div>
