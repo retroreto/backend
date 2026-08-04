@@ -81,7 +81,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
               <div className="flex items-center gap-2 text-[10px] font-mono font-bold text-[#00F0FF] uppercase tracking-widest bg-[#0B0E17] px-2.5 py-1 rounded-full border border-[#00F0FF]/30">
                 <Terminal className="w-3 h-3" />
-                <span>RETRORETO OS v2.5</span>
+                <span>RETRORETO PRESENTA</span>
               </div>
             </div>
 
@@ -89,7 +89,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <RetroRetoLogo size="xl" showSubtitle={true} />
 
             <p className="text-xs text-slate-300 max-w-sm mx-auto mt-3 leading-relaxed">
-              El juego de mesa interactivo de deducción temporal. ¿Descubrirás al Infiltrado o pasarás desapercibido?
+              Un viaje temporal. Un infiltrado oculto. ¡Descúbrelo!
             </p>
           </div>
         </div>
