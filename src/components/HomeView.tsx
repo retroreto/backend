@@ -261,7 +261,7 @@ export default function HomeView({
           onClick={onOpenRules}
           className="text-xs font-bold text-slate-400 hover:text-[#00F0FF] underline underline-offset-4 transition-colors"
         >
-          ¿Cómo se juega a RetroReto Infiltrados en el Tiempo? Ver Reglas
+          ¿Cómo se juega a RetroReto Infiltrados en el Tiempo?
         </button>
       </div>
     </div>
