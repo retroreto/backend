@@ -3,7 +3,7 @@ import { Rocket, Users, Smartphone, Sparkles, Play, ShieldAlert, ArrowRight, Rad
 import { AvatarPicker } from './AvatarPicker';
 import logoInfiltradosWhite from '../assets/images/logo-infiltrados-white.png';
 import { soundEngine } from '../utils/AudioService';
-import agentHeroImg from '../assets/images/src/assets/images/cronos new retroreto.webp';
+import agentHeroImg from '../assets/images/src/assets/images/src/assets/images/retroreto_agent_1785541053831.jpg';
 
 interface HomeViewProps {
   playerName: string;
